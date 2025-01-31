@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  imei_service:
+    build: .
+    container_name: imei_service
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
