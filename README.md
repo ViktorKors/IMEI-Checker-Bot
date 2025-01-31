@@ -7,7 +7,8 @@
 
 1. Клонируйте репозиторий:
    ```sh
-   git clone https://github.com/your-repo/imei-bot.git
+   git clone https://github.com/ViktorKors/IMEI-Checker-Bot.git
+
    cd imei-bot
    ```
 
@@ -76,16 +77,7 @@ logging.basicConfig(level=logging.INFO)
 
 ## Развертывание с Docker
 
-1. Соберите Docker-образ:
-   ```sh
-   docker build -t imei-bot .
-   ```
-2. Запустите контейнер:
-   ```sh
-   docker run -d --env-file .env imei-bot
-   ```
+ Перейти в директорию с файлом _docker-compose.yaml_, открыть терминал и запустить docker-compose с ключом `-d`:
 
-## Лицензия
-
-Проект распространяется под лицензией MIT.
-
+```
+docker compose -f docker-compose.yml up -d
